@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20130505164514) do
     t.string   "name"
     t.integer  "rank"
     t.integer  "count"
+    t.string   "sex"
     t.string   "year"
     t.datetime "created_at"
     t.datetime "updated_at"
