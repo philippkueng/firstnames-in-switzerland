@@ -1,6 +1,7 @@
 FirstnamesInSwitzerland::Application.routes.draw do
 
-  get 'firstnames/' => 'firstname#create'
+  get 'firstnames/create' => 'firstname#create'
+  get 'firstnames/' => 'firstname#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -7,4 +7,9 @@ class FirstnameController < ApplicationController
             render :json => {:message => 'error'}, :callback => params[:callback]
         end
     end
+
+    def index
+        @firstnames = Firstname.limit(10)
+        render :json => @firstnames, :callback => params[:callback]
+    end
 end
