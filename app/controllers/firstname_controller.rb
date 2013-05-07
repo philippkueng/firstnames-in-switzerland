@@ -1,6 +1,12 @@
 class FirstnameController < ApplicationController
     def create
-        @firstname = Firstname.new(:name => params[:name], :rank => params[:rank].to_i, :count => params[:count].to_i, :year => 'index')
+        @firstname = Firstname.new(
+          :name => params[:name],
+          :rank => params[:rank].to_i,
+          :count => params[:count].to_i,
+          :sex => params[:sex],
+          :year => 'index'
+        )
         if @firstname.save
             render :json => {:message => 'saved'}, :callback => params[:callback]
         else
