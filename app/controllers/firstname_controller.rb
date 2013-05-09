@@ -18,4 +18,14 @@ class FirstnameController < ApplicationController
         @firstnames = Firstname.limit(10)
         render :json => @firstnames, :callback => params[:callback]
     end
+
+    # ---
+    # non CRUD methods
+    # ---
+    
+    def less_common_as
+      current_firstname = Firstname.where(:name => params[:name], :year => 'index').first
+      @firstname = Firstname.where(:rank => current_firstname.rank.to_i + 1, :year => 'index').first
+      render :json => @firstname, :callback => params[:callback]
+    end
 end
