@@ -5,7 +5,7 @@ class FirstnameController < ApplicationController
           :rank => params[:rank].to_i,
           :count => params[:count].to_i,
           :sex => params[:sex],
-          :year => 'index'
+          :year => params[:year]
         )
         if @firstname.save
             render :json => {:message => 'saved'}, :callback => params[:callback]
