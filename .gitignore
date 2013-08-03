@@ -1,1 +1,3 @@
 development.log
+*.clj~
+*.swp
