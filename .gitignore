@@ -2,3 +2,5 @@ development.log
 *.clj~
 *.swp
 .vagrant
+*.pyc
+pyenv
